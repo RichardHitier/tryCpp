@@ -1,13 +1,34 @@
 #include <iostream>
+#include <string>
+#include <sstream>
 using namespace std;
 
 void showtypes();
 void askstr();
+int askint();
+void backwardloop(int);
 
 main(){
-    int x, y;
-    askstr();
+    int n = askint();
+    backwardloop(n);
     return 0;
+}
+
+void backwardloop( int n ){
+    cout << "Doing it for n="<<n<<endl;
+    while ( n > 0){
+        cout << "n: "<<n<<endl;
+        --n;
+    }
+}
+
+int askint(){
+    int n;
+    string s;
+    cout << "type int: ";
+    getline( cin, s);
+    stringstream( s ) >> n;
+    return n;
 }
 
 void askstr(){
