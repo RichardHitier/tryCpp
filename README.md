@@ -1,0 +1,2 @@
+# tryCpp
+my cpp course
