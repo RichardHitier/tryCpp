@@ -2,13 +2,20 @@
 using namespace std;
 
 void showtypes();
+void askstr();
 
 main(){
     int x, y;
-    showtypes();
+    askstr();
     return 0;
 }
 
+void askstr(){
+    string mystr;
+    cout << "what's you name: ";
+    getline( cin, mystr);
+    cout << "hello " << mystr << endl;
+}
 void showtypes(){
     cout << "Size of char : " << sizeof(char) << endl;
     cout << "Size of int : " << sizeof(int) << endl;
