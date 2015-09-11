@@ -5,5 +5,7 @@ int main(void){
     int n = askint();
     changeval(n);
     backwardloop(n);
+    double res = add(10.0, 11.1);
+    cout <<  res << endl;
     return 0;
 }

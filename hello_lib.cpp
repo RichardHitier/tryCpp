@@ -4,6 +4,11 @@
 
 using namespace std;
 
+template <class T>
+T add(T a, T b){
+    return a+b;
+}
+
 void backwardloop( int n ){
     cout << "Doing it for n="<<n<<endl;
     while ( n > 0){
