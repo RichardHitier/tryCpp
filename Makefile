@@ -6,8 +6,8 @@ default:  clean hello
 
 .PHONY: clean
 clean:
-	rm *.o
-	rm hello
+	-rm *.o
+	-rm hello
 
 %.o: %.cpp
 	${CPP} -c $< -o $@
