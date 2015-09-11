@@ -7,3 +7,4 @@ void showtypes();
 void askstr();
 int askint();
 void backwardloop(int);
+void changeval(int&);

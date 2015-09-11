@@ -12,6 +12,10 @@ void backwardloop( int n ){
     }
 }
 
+void changeval(int& a){
+    a*=3;
+}
+
 int askint(){
     int n;
     string s;
