@@ -1,7 +1,10 @@
 CPPOPT=-Wall -Wextra 
 CPP=g++ ${CPPOPT}
 
-PRODUCTS=hello pointers structs
+PRODUCTS=hello\
+		 pointers\
+		 rectangle\
+		 structs
 
 .PHONY: default
 default:  clean hello 
