@@ -4,13 +4,14 @@
 
 using namespace std;
 
-void filltable(int* table, int n){
+int * filltable(int n){
+    int * table  = new int[n];
     int i=0;
     for( ; i<n; i++){
         cout << "filling in "<<i<<endl;
         table[i]=i;
     }
-    table[i]=i;
+    return table;
 }
 
 void showtable( int* table, int n ){

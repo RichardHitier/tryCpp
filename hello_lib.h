@@ -12,7 +12,7 @@ int askint();
 void backwardloop(int);
 void changeval(int&);
 void showtable(int*, int);
-void filltable(int*, int);
+int * filltable(int);
 
 
 //
