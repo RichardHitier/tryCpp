@@ -1,24 +1,39 @@
 #include <iostream>
 using namespace std;
 
-class Rectangle {
+class Shape {
+    public:
+        int width, height;
+        void showarea();
+        Shape(){
+            cout << "Shape Constructor"<<endl;
+        }
 
-    int width, height;
+};
+
+class Triangle :public Shape{
+    public:
+        void showarea(){ cout << "Triangle arear"<<endl;}
+};
+
+class Rectangle :public Shape{
+
     int myindex;
     public:
-    static int index;
-    Rectangle();
-    Rectangle(int, int);
-    void init();
-    void setvalues(int, int);
-    void showarea(){ cout << "The "<<myindex<< "th area is: "<<area()<<endl;}
-    int area(){ return (width*height) ;}
+        static int index;
+        Rectangle();
+        Rectangle(int, int);
+        void init();
+        void setvalues(int, int);
+        void showarea(){ cout << "The "<<myindex<< "th area is: "<<area()<<endl;}
+        int area(){ return (width*height) ;}
 
 };
 
 int Rectangle::index=0;
 
 void Rectangle::init(){
+    cout << "Rectangle initiator"<<endl;
     myindex=index++;
 }
 
@@ -40,7 +55,9 @@ void Rectangle::setvalues(int w, int h){
 int main(void){
     Rectangle myrect(2,3);
     Rectangle otherrect;
+    Triangle mytriangle;
     myrect.showarea();
     otherrect.showarea();
+    mytriangle.showarea();
     return 0;
 }
