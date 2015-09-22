@@ -4,9 +4,21 @@
 
 using namespace std;
 
-template <class T>
-T add(T a, T b){
-    return a+b;
+void filltable(int* table, int n){
+    int i=0;
+    for( ; i<n; i++){
+        cout << "filling in "<<i<<endl;
+        table[i]=i;
+    }
+    table[i]=i;
+}
+
+void showtable( int* table, int n ){
+    cout << "showing out "<<n<<endl;
+    for( int i=0; i < n; i++){
+        cout << table[i]<<", ";
+    }
+    cout << endl;
 }
 
 void backwardloop( int n ){
