@@ -4,11 +4,14 @@ using namespace std;
 class Rectangle {
     int width, height;
     public:
+    Rectangle(int, int);
     void setvalues(int, int);
-    int area(){
-        return width*height;
-    }
+    int area(){ return (width*height) ;}
 };
+
+Rectangle::Rectangle(int w, int h){
+    setvalues(w, h);
+}
 
 void Rectangle::setvalues(int w, int h){
     width = w;
@@ -16,8 +19,7 @@ void Rectangle::setvalues(int w, int h){
 }
 
 int main(void){
-    Rectangle myrect;
-    myrect.setvalues(2,3);
+    Rectangle myrect(2,3);
     cout << "The area is: "<<myrect.area()<<endl;
     return 0;
 }
