@@ -1,13 +1,15 @@
 CPPOPT=-Wall -Wextra 
 CPP=g++ ${CPPOPT}
 
+PRODUCTS=hello pointers
+
 .PHONY: default
 default:  clean hello 
 
 .PHONY: clean
 clean:
 	-rm *.o
-	-rm hello
+	-rm ${PRODUCTS}
 
 %.o: %.cpp
 	${CPP} -c $< -o $@
