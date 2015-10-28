@@ -1,6 +1,7 @@
 #include <iostream>
-
+extern "C"{
 #include "myExtern.h"
+}
 
 class UseExtern
 {
