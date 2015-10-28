@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "myExtern.h"
+
 class UseExtern
 {
     public:
@@ -7,7 +9,7 @@ class UseExtern
             std::cout << "Hey !! Building !!!"<<std::endl;
         }
         void doIt(){
-            std::cout <<"Yes I Can"<<std::endl;
+            std::cout <<"Yes I Can "<<getMore(3,4)<<std::endl;
         }
 };
         
