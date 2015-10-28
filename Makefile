@@ -19,3 +19,6 @@ clean:
 
 hello: hello.o hello_lib.o
 	${CPP} $? -o $@
+
+useExtern: myExtern.o useExtern.o
+	g++ -o $@ $^
