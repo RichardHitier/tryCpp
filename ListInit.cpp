@@ -19,8 +19,13 @@ class Bar : public Foo
 class Qux
 {
     public:
+        Qux(string _foo) : _foo(_foo){show();}
         Qux() : _foo("Init String"), _baz( "Another Stringinit")
     {
+        this->show();
+    }
+        void show()
+        {
         cout << "Qux's constructor"<<endl
             << " with _foo: "
             << this->_foo<<endl
@@ -29,12 +34,13 @@ class Qux
             <<endl;
     }
     private:
-        std::string _foo;
         std::string _baz;
+        std::string _foo;
 };
 
 int main()
 {
     Bar bar;
     Qux qux;
+    Qux qux1("foo in constructor");
 }
